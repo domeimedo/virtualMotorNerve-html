@@ -1,0 +1,35 @@
+{
+  "name": "virtualmotornerve-html",
+  "version": "0.0.1",
+  "description": "HTML viewer of Virtual Motor Nerve",
+  "main": "index.js",
+  "dependencies": {
+    "google-protobuf": "^3.7.1",
+    "three": "^0.101.1",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.3.3333",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  },
+  "devDependencies": {
+    "three-orbitcontrols": "^2.101.1",
+    "three-vrm": "0.0.13",
+    "ts-protoc-gen": "^0.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "watch": "webpack -w",
+    "build-protobuf:win": "pushd spec\\protobuf && for %1 in (*.proto) do protoc --plugin=\"protoc-gen-ts=%cd%\\node_modules\\.bin\\protoc-gen-ts.cmd\" --js_out=\"import_style=commonjs,binary:../../src/foundation\" --ts_out=\"../../src/foundation\" %1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domeimedo/virtualMotorNerve-html.git"
+  },
+  "author": "Medo Domei",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/domeimedo/virtualMotorNerve-html/issues"
+  },
+  "homepage": "https://github.com/domeimedo/virtualMotorNerve-html#readme"
+}
