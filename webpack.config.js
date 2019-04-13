@@ -2,7 +2,7 @@ module.exports = {
   mode: 'development',
   entry: './src/main.ts',
   output: {
-    path: `${__dirname}/Build`,
+    path: `${__dirname}/dist`,
     filename: 'main.js'
   },
   module: {

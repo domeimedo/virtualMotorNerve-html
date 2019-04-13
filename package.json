@@ -17,6 +17,7 @@
     "ts-protoc-gen": "^0.9.0"
   },
   "scripts": {
+    "build-all:win": "npm run build-protobuf:win && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "watch": "webpack -w",
