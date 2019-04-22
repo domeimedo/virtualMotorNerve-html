@@ -11,9 +11,6 @@ export class Prototype extends jspb.Message {
   getIdentity(): number;
   setIdentity(value: number): void;
 
-  getSerialid(): number;
-  setSerialid(value: number): void;
-
   clearMotionsList(): void;
   getMotionsList(): Array<MotionPrototype_pb.MotionPrototype>;
   setMotionsList(value: Array<MotionPrototype_pb.MotionPrototype>): void;
@@ -33,7 +30,6 @@ export namespace Prototype {
   export type AsObject = {
     name: string,
     identity: number,
-    serialid: number,
     motionsList: Array<MotionPrototype_pb.MotionPrototype.AsObject>,
   }
 }

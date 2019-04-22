@@ -41,7 +41,7 @@ if (goog.DEBUG && !COMPILED) {
  * @private {!Array<number>}
  * @const
  */
-proto.com.domeime.vmn.Prototype.repeatedFields_ = [4];
+proto.com.domeime.vmn.Prototype.repeatedFields_ = [3];
 
 
 
@@ -74,7 +74,6 @@ proto.com.domeime.vmn.Prototype.toObject = function(includeInstance, msg) {
   var f, obj = {
     name: jspb.Message.getFieldWithDefault(msg, 1, ""),
     identity: jspb.Message.getFieldWithDefault(msg, 2, 0),
-    serialid: jspb.Message.getFieldWithDefault(msg, 3, 0),
     motionsList: jspb.Message.toObjectList(msg.getMotionsList(),
     MotionPrototype_pb.MotionPrototype.toObject, includeInstance)
   };
@@ -122,10 +121,6 @@ proto.com.domeime.vmn.Prototype.deserializeBinaryFromReader = function(msg, read
       msg.setIdentity(value);
       break;
     case 3:
-      var value = /** @type {number} */ (reader.readUint32());
-      msg.setSerialid(value);
-      break;
-    case 4:
       var value = new MotionPrototype_pb.MotionPrototype;
       reader.readMessage(value,MotionPrototype_pb.MotionPrototype.deserializeBinaryFromReader);
       msg.addMotions(value);
@@ -173,17 +168,10 @@ proto.com.domeime.vmn.Prototype.serializeBinaryToWriter = function(message, writ
       f
     );
   }
-  f = message.getSerialid();
-  if (f !== 0) {
-    writer.writeUint32(
-      3,
-      f
-    );
-  }
   f = message.getMotionsList();
   if (f.length > 0) {
     writer.writeRepeatedMessage(
-      4,
+      3,
       f,
       MotionPrototype_pb.MotionPrototype.serializeBinaryToWriter
     );
@@ -222,33 +210,18 @@ proto.com.domeime.vmn.Prototype.prototype.setIdentity = function(value) {
 
 
 /**
- * optional uint32 serialId = 3;
- * @return {number}
- */
-proto.com.domeime.vmn.Prototype.prototype.getSerialid = function() {
-  return /** @type {number} */ (jspb.Message.getFieldWithDefault(this, 3, 0));
-};
-
-
-/** @param {number} value */
-proto.com.domeime.vmn.Prototype.prototype.setSerialid = function(value) {
-  jspb.Message.setProto3IntField(this, 3, value);
-};
-
-
-/**
- * repeated MotionPrototype motions = 4;
+ * repeated MotionPrototype motions = 3;
  * @return {!Array<!proto.com.domeime.vmn.MotionPrototype>}
  */
 proto.com.domeime.vmn.Prototype.prototype.getMotionsList = function() {
   return /** @type{!Array<!proto.com.domeime.vmn.MotionPrototype>} */ (
-    jspb.Message.getRepeatedWrapperField(this, MotionPrototype_pb.MotionPrototype, 4));
+    jspb.Message.getRepeatedWrapperField(this, MotionPrototype_pb.MotionPrototype, 3));
 };
 
 
 /** @param {!Array<!proto.com.domeime.vmn.MotionPrototype>} value */
 proto.com.domeime.vmn.Prototype.prototype.setMotionsList = function(value) {
-  jspb.Message.setRepeatedWrapperField(this, 4, value);
+  jspb.Message.setRepeatedWrapperField(this, 3, value);
 };
 
 
@@ -258,7 +231,7 @@ proto.com.domeime.vmn.Prototype.prototype.setMotionsList = function(value) {
  * @return {!proto.com.domeime.vmn.MotionPrototype}
  */
 proto.com.domeime.vmn.Prototype.prototype.addMotions = function(opt_value, opt_index) {
-  return jspb.Message.addToRepeatedWrapperField(this, 4, opt_value, proto.com.domeime.vmn.MotionPrototype, opt_index);
+  return jspb.Message.addToRepeatedWrapperField(this, 3, opt_value, proto.com.domeime.vmn.MotionPrototype, opt_index);
 };
 
 

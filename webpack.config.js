@@ -1,9 +1,12 @@
 module.exports = {
   mode: 'development',
-  entry: './src/main.ts',
+  entry: {
+    "dist/VirtualMotorNerve": './src/VirtualMotorNerve.ts',
+    "example/example": './src/example.ts'
+  },
   output: {
-    path: `${__dirname}/dist`,
-    filename: 'main.js'
+    path: `${__dirname}`,
+    filename: '[name].js'
   },
   module: {
     rules: [
